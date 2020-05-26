@@ -1,0 +1,263 @@
+template_names_monarchy = {
+	rank = {
+		1 = DUCHY
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = DUKE
+		2 = KING
+		3 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = DUCHESS
+		2 = QUEEN
+		3 = EMPRESS
+	}
+
+	consort_male  = {
+		1 = PRINCE_CONSORT
+		2 = PRINCE_CONSORT
+		3 = PRINCE_CONSORT
+	}
+
+	consort_female = {
+		1 = CONSORT
+		2 = QUEEN_CONSORT
+		3 = EMPRESS_CONSORT
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+	}
+
+	government_reform = monarchy_mechanic
+
+	trigger = {
+		always = no
+	}
+}
+
+rnfci_normand_monarchy_subject = {
+
+	ruler_male = {		
+		1 = DUC_NORMAND_PEER
+	}
+
+	ruler_female = {		
+		1 = DUCHESSE_NORMAND_PEER
+	}
+
+	trigger = {
+		overlord = {
+			government_rank = 2
+			culture_group = french
+		}
+		government = monarchy
+		NOT = { has_reform = revolutionary_empire_reform }
+		tag = NRM
+		primary_culture = normand
+	}
+}
+
+rnfci_normand_monarchy = {
+	rank = {
+		1 = DUCHE_NORMAND
+		2 = REGNE_NORMAND
+		3 = EMPERE_NORMAND
+	}
+
+	ruler_male = {
+		1 = DUC_NORMAND
+		2 = REI_NORMAND
+		3 = EMPERUR_NORMAND
+	}
+
+	ruler_female = {
+		1 = DUCHESSE_NORMAND
+		2 = REINE_NORMAND
+		3 = EMPERICE_NORMAND
+	}
+
+	consort_male = {
+		1 = DUC_ESPUS_NORMAND
+		2 = REI_ESPUS_NORMAND
+		3 = EMPERUR_ESPUS_NORMAND
+	}
+
+	consort_female = {
+		1 = DUCHESSE_ESPUSE_NORMAND
+		2 = REINE_ESPUSE_NORMAND
+		3 = EMPERICE_ESPUSE_NORMAND
+	}
+
+	heir_male = {
+		1 = HERITER_NORMAND
+		2 = HERITER_NORMAND
+		3 = HERITER_NORMAND
+	}
+
+	heir_female = {
+		1 = HERITER_F_NORMAND
+		2 = HERITER_F_NORMAND
+		3 = HERITER_F_NORMAND
+	}
+
+	trigger = {
+		government = monarchy
+		NOT = { has_reform = revolutionary_empire_reform }
+		primary_culture = normand
+	}
+}
+
+rnfci_occitan_monarchy = {
+	rank = {
+		1 = DUCHY_OCCITAN
+		2 = KNGD_OCCITAN
+		3 = EMP_OCCITAN
+	}
+
+	ruler_male = {
+		1 = DUKE_OCCITAN
+		2 = KNG_OCCITAN
+		3 = EMPEROR_OCCITAN
+	}
+
+	ruler_female = {
+		1 = DUCHESS_OCCITAN
+		2 = QUEEN_OCCITAN
+		3 = EMPRESS_OCCITAN
+	}
+
+	consort_male = {
+		1 = DUKE_CONSORT_OCCITAN
+		2 = KNG_CONSORT_OCCITAN
+		3 = EMPEROR_CONSORT_OCCITAN
+	}
+
+	consort_female = {
+		1 = DUCHESS_CONSORT_OCCITAN
+		2 = QUEEN_CONSORT_OCCITAN
+		3 = EMPRESS_CONSORT_OCCITAN
+	}
+
+	heir_male = {
+		1 = HEIR_OCCITAN
+		2 = HEIR_OCCITAN
+		3 = HEIR_OCCITAN
+	}
+
+	heir_female = {
+		1 = HEIR_F_OCCITAN
+		2 = HEIR_F_OCCITAN
+		3 = HEIR_F_OCCITAN
+	}
+	trigger = {
+		always = no
+		government = monarchy
+		NOT = { has_reform = revolutionary_empire_reform }
+		OR = {
+			primary_culture = occitain
+			primary_culture = aquitaine
+			primary_culture = gascon
+			primary_culture = auvergnat_culture
+		}
+		is_subject = no
+	}
+}
+
+rnfci_flemish_monarchy = {
+	
+	rank = {
+        1 = DUCHY_FLEMISH_MONARCHY
+        
+    }
+    ruler_male = {
+        1 = DUKE_FLEMISH_MONARCHY
+    }
+    ruler_female = {
+        1 = DUCHESS_FLEMISH_MONARCHY 
+    }
+	
+	trigger = {
+        government = monarchy
+		NOT = { has_reform = revolutionary_empire_reform }
+        OR = {
+            tag = FLA
+            AND = {
+                OR = {
+                    primary_culture = dutch
+                    primary_culture = low_franconian
+                    primary_culture = flemish
+                }                
+                capital_scope = {
+                    area = flanders_area
+                }
+            }
+        }
+	}
+	
+}
+
+rnfci_generic_french_monarchy = {
+	rank = {
+		1 = DUCHY_GEN_FRENCH
+		2 = KINGDOM_GEN_FRENCH
+	}
+
+	ruler_male = {
+		1 = DUKE_GENERIC_FRENCH
+		2 = KING_GENERIC_FRENCH
+		3 = EMPEROR_GENERIC_FRENCH
+	}
+
+	ruler_female = {
+		1 = DUCHESS_GENERIC_FRENCH
+		2 = QUEEN_GENERIC_FRENCH
+		3 = EMPRESS_GENERIC_FRENCH
+	}
+
+	consort_male = {
+		1 = PRINCE_CONSORT_GENERIC_FRENCH
+		2 = PRINCE_CONSORT_GENERIC_FRENCH
+		3 = PRINCE_CONSORT_GENERIC_FRENCH
+	}
+
+	consort_female = {
+		1 = CONSORT_GENERIC_FRENCH
+		2 = QUEEN_CONSORT_GENERIC_FRENCH
+		3 = EMPRESS_CONSORT_GENERIC_FRENCH
+	}
+
+	trigger = {
+		government = monarchy
+		NOT = { has_reform = revolutionary_empire_reform }
+		#is_subject = no
+		#NOT = {
+		#	tag = BUR
+		#}
+		OR = {
+			primary_culture = occitain
+			primary_culture = aquitaine
+			primary_culture = gascon
+			primary_culture = auvergnat_culture
+			culture_group = french
+		}
+		capital_scope = {
+            OR = {            
+			    region = france_region          
+                area = wallonia_area  
+            }
+		}
+	}
+}
