@@ -120,6 +120,22 @@ rnfci_normand_monarchy = {
 	}
 }
 
+rnfci_toulouse_monarchy = {
+	rank = {
+		1 = "DUCHY_TOULOUSE"
+	}
+
+	ruler_male = {
+		1 = "DUKE_TOULOUSE"
+	}
+
+	trigger = {
+		government = monarchy
+		NOT = { has_reform = revolutionary_empire_reform }
+		primary_culture = occitain
+		tag = TOU
+	}
+}
 rnfci_occitan_monarchy = {
 	rank = {
 		1 = DUCHY_OCCITAN
@@ -128,7 +144,6 @@ rnfci_occitan_monarchy = {
 	}
 
 	ruler_male = {
-		1 = DUKE_OCCITAN
 		2 = KNG_OCCITAN
 		3 = EMPEROR_OCCITAN
 	}
@@ -151,19 +166,18 @@ rnfci_occitan_monarchy = {
 		3 = EMPRESS_CONSORT_OCCITAN
 	}
 
-	heir_male = {
-		1 = HEIR_OCCITAN
-		2 = HEIR_OCCITAN
-		3 = HEIR_OCCITAN
-	}
-
-	heir_female = {
-		1 = HEIR_F_OCCITAN
-		2 = HEIR_F_OCCITAN
-		3 = HEIR_F_OCCITAN
-	}
+	#heir_male = {
+	#	1 = HEIR_OCCITAN
+	#	2 = HEIR_OCCITAN
+	#	3 = HEIR_OCCITAN
+	#}
+	#
+	#heir_female = {
+	#	1 = HEIR_F_OCCITAN
+	#	2 = HEIR_F_OCCITAN
+	#	3 = HEIR_F_OCCITAN
+	#}
 	trigger = {
-		always = no
 		government = monarchy
 		NOT = { has_reform = revolutionary_empire_reform }
 		OR = {
