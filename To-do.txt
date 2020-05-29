@@ -3,11 +3,11 @@ Ruler Titles:
 Occitan cultures
 Portuguese
 Catalan
-Northern Italian
+Northern Italian - DONE, COVERED BY GENERIC ITALIAN
 
 Government Names:
 -----------------
 Occitan cultures
 Portuguese
 Catalan
-Northern Italian
+Northern Italian - DONE, COVERED BY GENERIC ITALIAN
