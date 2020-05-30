@@ -1,0 +1,2 @@
+elector = yes
+set_government_rank = 2

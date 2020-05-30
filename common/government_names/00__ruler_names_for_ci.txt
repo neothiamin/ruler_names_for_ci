@@ -49,15 +49,49 @@ template_names_monarchy = {
 	}
 }
 
-#Names for a nation that is 1) Normaund 2) Normandy 3) a subject of a rank-2+ French language group nation. So if NRM is Normaund and a subject of a Kingdom-level France, it will use these names as an overwrite for the other Normaund ones
+#Names for a nation that is 1) Normaund 2) Normandy 3) a subject of a rank-2+ French language group nation.
 rnfci_normand_monarchy_subject = {
-
-	ruler_male = {		
-		1 = DUC_NORMAND_PEER
+	
+	rank = {
+		1 = DUCHE_NORMAND
+		2 = REGNE_NORMAND
+		3 = EMPERE_NORMAND
 	}
 
-	ruler_female = {		
+	ruler_male = {
+		1 = DUC_NORMAND_PEER
+		2 = REI_NORMAND
+		3 = EMPERUR_NORMAND
+	}
+
+	ruler_female = {
 		1 = DUCHESSE_NORMAND_PEER
+		2 = REINE_NORMAND
+		3 = EMPERICE_NORMAND
+	}
+
+	consort_male = {
+		1 = DUC_ESPUS_NORMAND
+		2 = REI_ESPUS_NORMAND
+		3 = EMPERUR_ESPUS_NORMAND
+	}
+
+	consort_female = {
+		1 = DUCHESSE_ESPUSE_NORMAND
+		2 = REINE_ESPUSE_NORMAND
+		3 = EMPERICE_ESPUSE_NORMAND
+	}
+
+	heir_male = {
+		1 = HERITER_NORMAND
+		2 = HERITER_NORMAND
+		3 = HERITER_NORMAND
+	}
+
+	heir_female = {
+		1 = HERITER_F_NORMAND
+		2 = HERITER_F_NORMAND
+		3 = HERITER_F_NORMAND
 	}
 
 	trigger = {
@@ -150,6 +184,9 @@ rnfci_toulouse_monarchy = {
 		NOT = { has_reform = revolutionary_empire_reform }
 		primary_culture = occitain
 		tag = TOU
+		NOT = {
+			government_rank = 2
+		}
 	}
 }
 
@@ -195,6 +232,7 @@ rnfci_occitan_monarchy = {
 	#	2 = HEIR_F_OCCITAN
 	#	3 = HEIR_F_OCCITAN
 	#}
+
 	trigger = {
 		government = monarchy
 		NOT = { has_reform = revolutionary_empire_reform }
@@ -224,7 +262,10 @@ rnfci_flemish_monarchy = {
 	
 	trigger = {
         government = monarchy
-		NOT = { has_reform = revolutionary_empire_reform }
+		NOT = { 
+			has_reform = revolutionary_empire_reform
+			government_rank = 2
+		}
         OR = {
             tag = FLA
             AND = {
@@ -242,59 +283,7 @@ rnfci_flemish_monarchy = {
 	
 }
 
-#"Generic French" names. This applies to all "Français" group nations as well as French-region/Hainaut-area Occitanoromàniques-speaking nations that are not already covered above by rnfci_occitan_monarchy. Basically, if a nation is Occitanoromàniques-speaking BUT is a subject (for example, Bourbonnais, which is Auvernhat but a subject of France) it gets these names too
-rnfci_generic_french_monarchy = {
-	rank = {
-		1 = DUCHY_GEN_FRENCH
-		2 = KINGDOM_GEN_FRENCH
-	}
 
-	ruler_male = {
-		1 = DUKE_GENERIC_FRENCH
-		2 = KING_GENERIC_FRENCH
-		3 = EMPEROR_GENERIC_FRENCH
-	}
-
-	ruler_female = {
-		1 = DUCHESS_GENERIC_FRENCH
-		2 = QUEEN_GENERIC_FRENCH
-		3 = EMPRESS_GENERIC_FRENCH
-	}
-
-	consort_male = {
-		1 = PRINCE_CONSORT_GENERIC_FRENCH
-		2 = PRINCE_CONSORT_GENERIC_FRENCH
-		3 = PRINCE_CONSORT_GENERIC_FRENCH
-	}
-
-	consort_female = {
-		1 = CONSORT_GENERIC_FRENCH
-		2 = QUEEN_CONSORT_GENERIC_FRENCH
-		3 = EMPRESS_CONSORT_GENERIC_FRENCH
-	}
-
-	trigger = {
-		government = monarchy
-		NOT = { has_reform = revolutionary_empire_reform }
-		#is_subject = no
-		#NOT = {
-		#	tag = BUR
-		#}
-		OR = {
-			primary_culture = occitain
-			primary_culture = aquitaine
-			primary_culture = gascon
-			primary_culture = auvergnat_culture
-			culture_group = french
-		}
-		capital_scope = {
-            OR = {            
-			    region = france_region          
-                area = wallonia_area  
-            }
-		}
-	}
-}
 
 #Special names for a Spain/Castile that owns any province in the Asturias area. Historically (and to this day) the heir-apparent is known as the "Prince/Princess of Asturias" in Spain.
 rnfci_spanish_monarchy_asturias = {
@@ -334,7 +323,7 @@ rnfci_spanish_monarchy_asturias = {
 		2 = KING_CONSORT_GEN_SPANISH_MONARCHY
 		3 = EMPEROR_CONSORT_GEN_SPANISH_MONARCHY
 	}
-
+	
 	consort_female = {
 		1 = DUCHESS_CONSORT_GEN_SPANISH_MONARCHY
 		2 = QUEEN_CONSORT_GEN_SPANISH_MONARCHY
@@ -348,12 +337,74 @@ rnfci_spanish_monarchy_asturias = {
 		}
 		government = monarchy
 		NOT = { has_reform = revolutionary_empire_reform }
-		asturias_area = {
-			owned_by = ROOT
+		any_owned_province = {
+			area = asturias_area
 		}
 	}
 }
 
+#Crown of Aragon names
+rnfci_crown_of_aragon = {
+	
+	rank = {
+		1 = DUCHY_CATALAN_MONARCHY
+		2 = KINGDOM_CROWN_OF_ARAGON
+		3 = EMPIRE_CATALAN_MONARCHY
+	}
+
+	ruler_male = {
+		1 = DUKE_CATALAN_MONARCHY
+		2 = KING_CATALAN_MONARCHY
+		3 = EMPEROR_CATALAN_MONARCHY
+	}
+
+	ruler_female = {
+		1 = DUCHESS_CATALAN_MONARCHY
+		2 = QUEEN_CATALAN_MONARCHY
+		3 = EMPRESS_CATALAN_MONARCHY
+	}
+
+	consort_male = {
+		1 = PRINCE_CONSORT_CATALAN_MONARCHY
+		2 = PRINCE_CONSORT_CATALAN_MONARCHY
+		3 = PRINCE_CONSORT_CATALAN_MONARCHY
+	}
+
+	consort_female = {
+		1 = CONSORT_CATALAN_MONARCHY
+		2 = QUEEN_CONSORT_CATALAN_MONARCHY
+		3 = EMPRESS_CONSORT_CATALAN_MONARCHY
+	}
+
+	heir_male = {
+		1 = HEIR_CATALAN_MONARCHY
+		2 = HEIR_CATALAN_MONARCHY
+		3 = HEIR_CATALAN_MONARCHY
+	}
+	
+	heir_female = {
+		1 = HEIR_fem_CATALAN_MONARCHY
+		2 = HEIR_fem_CATALAN_MONARCHY
+		3 = HEIR_fem_CATALAN_MONARCHY
+	}
+
+	trigger = {
+		tag = ARA
+		OR = {
+			government = monarchy
+			has_reform = crown_of_aragon
+		}
+		any_owned_province = {
+			OR = {
+				area = catalonia_area
+				area = valencia_area
+			}
+		}
+		NOT = {
+			has_reform = revolutionary_empire_reform
+		}
+	}
+}
 #UNUSED
 rnfci_castile_monarchy = {
 
@@ -395,6 +446,257 @@ rnfci_castile_monarchy = {
 		}
 	}
 }
+
+#Alternate names for Duchy-rank Italian monarchies with less than 50 development - equates to "County".
+rnfci_generic_italian_monarchy_county = {
+
+	rank = {
+		1 = DUCHY_GEN_ITALIAN_SUBJECT
+		#2 = KINGDOM_GEN_ITALIAN
+		#3 = EMPIRE_GEN_ITALIAN
+	}
+
+	ruler_male = {
+		1 = DUKE_GEN_ITALIAN_SUBJECT
+		#2 = KING_GEN_ITALIAN
+		#3 = EMPEROR_GEN_ITALIAN
+	}
+
+	ruler_female = {
+		1 = DUCHESS_GEN_ITALIAN_SUBJECT
+		#2 = QUEEN_GEN_ITALIAN
+		#3 = EMPRESS_GEN_ITALIAN
+	}
+
+	trigger = {		
+		government = monarchy
+		NOT = { has_reform = revolutionary_empire_reform }
+		#is_subject = yes
+		NOT = {
+			government_rank = 2 #Since these government names are only for Duchy-rank nations, this is to prevent nations which would otherwise fulfill these triggers from having "nogovernmentname" as a name
+			total_development = 50
+			#The following tags were either historically duchies or were counties that became duchies by 1444
+			tag = URB
+			tag = MLO
+			tag = LUC
+			tag = MAN
+			tag = PAR
+			tag = TUS
+			tag = MSS
+		}
+		OR = {
+			culture_group = latin
+			culture_group = gallo_italic
+			primary_culture = sardinian
+			primary_culture = friulian_culture
+			primary_culture = ladin_culture
+		}
+	}
+}
+
+#Names for HRE Italian Kingdoms. Historically the highest HRE Italian title was Prince/Princess, since they couldn't be Kings/Queens as they still fell under the jurisdiction of the HRE
+rnfci_italian_prince = {
+	
+	rank = {
+		2 = PRINCIPALITY_ITALIAN_HRE
+	}
+
+	ruler_male = {
+		2 = PRINCE_ITALIAN_HRE
+	}
+
+	ruler_female = {
+		2 = PRINCESS_ITALIAN_HRE
+	}
+
+	trigger = {
+		is_part_of_hre = yes
+		government_rank = 2
+		NOT = {
+			government_rank = 3
+		}
+		government = monarchy
+		NOT = { has_reform = revolutionary_empire_reform }
+		OR = {
+			culture_group = latin
+			culture_group = gallo_italic
+			primary_culture = sardinian
+			primary_culture = friulian_culture
+			primary_culture = ladin_culture
+		}
+	}
+}
+
+#"Generic French" names. This applies to all "Français" group nations as well as French-region/Hainaut-area Occitanoromàniques-speaking nations that are not already covered above by rnfci_occitan_monarchy. Basically, if a nation is Occitanoromàniques-speaking BUT is a subject (for example, Bourbonnais, which is Auvernhat but a subject of France) it gets these names too
+rnfci_generic_french_monarchy = {
+	rank = {
+		1 = DUCHY_GEN_FRENCH
+		2 = KINGDOM_GEN_FRENCH
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = DUKE_GENERIC_FRENCH
+		2 = KING_GENERIC_FRENCH
+		3 = EMPEROR_GENERIC_FRENCH
+	}
+
+	ruler_female = {
+		1 = DUCHESS_GENERIC_FRENCH
+		2 = QUEEN_GENERIC_FRENCH
+		3 = EMPRESS_GENERIC_FRENCH
+	}
+
+	consort_male = {
+		1 = PRINCE_CONSORT_GENERIC_FRENCH
+		2 = PRINCE_CONSORT_GENERIC_FRENCH
+		3 = PRINCE_CONSORT_GENERIC_FRENCH
+	}
+
+	consort_female = {
+		1 = CONSORT_GENERIC_FRENCH
+		2 = QUEEN_CONSORT_GENERIC_FRENCH
+		3 = EMPRESS_CONSORT_GENERIC_FRENCH
+	}	
+	
+	heir_male = {
+		1 = DAUPHIN
+		2 = DAUPHIN
+		3 = DAUPHIN
+	}
+	
+	heir_female = {
+		1 = DAUPHINE
+		2 = DAUPHINE
+		3 = DAUPHINE
+	}
+
+	trigger = {
+		government = monarchy
+		NOT = { has_reform = revolutionary_empire_reform }
+		#is_subject = no
+		#NOT = {
+		#	tag = BUR
+		#}
+		OR = {
+			primary_culture = occitain
+			primary_culture = aquitaine
+			primary_culture = gascon
+			primary_culture = auvergnat_culture
+			culture_group = french
+		}
+		capital_scope = {
+            OR = {            
+			    region = france_region          
+                area = wallonia_area  
+            }
+		}
+	}
+}
+
+#Catalan Names
+rnfci_catalan_monarchy = {
+	rank = {
+		1 = DUCHY_CATALAN_MONARCHY
+		2 = KINGDOM_CATALAN_MONARCHY
+		3 = EMPIRE_CATALAN_MONARCHY
+	}
+
+	ruler_male = {
+		1 = DUKE_CATALAN_MONARCHY
+		2 = KING_CATALAN_MONARCHY
+		3 = EMPEROR_CATALAN_MONARCHY
+	}
+
+	ruler_female = {
+		1 = DUCHESS_CATALAN_MONARCHY
+		2 = QUEEN_CATALAN_MONARCHY
+		3 = EMPRESS_CATALAN_MONARCHY
+	}
+
+	consort_male = {
+		1 = PRINCE_CONSORT_CATALAN_MONARCHY
+		2 = PRINCE_CONSORT_CATALAN_MONARCHY
+		3 = PRINCE_CONSORT_CATALAN_MONARCHY
+	}
+
+	consort_female = {
+		1 = CONSORT_CATALAN_MONARCHY
+		2 = QUEEN_CONSORT_CATALAN_MONARCHY
+		3 = EMPRESS_CONSORT_CATALAN_MONARCHY
+	}
+
+	heir_male = {
+		1 = HEIR_CATALAN_MONARCHY
+		2 = HEIR_CATALAN_MONARCHY
+		3 = HEIR_CATALAN_MONARCHY
+	}
+	
+	heir_female = {
+		1 = HEIR_fem_CATALAN_MONARCHY
+		2 = HEIR_fem_CATALAN_MONARCHY
+		3 = HEIR_fem_CATALAN_MONARCHY
+	}
+
+	trigger = {
+		government = monarchy
+		NOT = { has_reform = revolutionary_empire_reform }
+		primary_culture = catalan		
+	}
+}
+
+#Navarro-Aragonés Names
+rnfci_aragonese_names = {
+	
+	rank = {
+		1 = DUCHY_ARAGONESE_MONARCHY
+		2 = KINGDOM_ARAGONESE_MONARCHY
+		3 = EMPIRE_ARAGONESE_MONARCHY
+	}
+
+	ruler_male = {
+		1 = DUKE_ARAGONESE_MONARCHY
+		2 = KING_ARAGONESE_MONARCHY
+		3 = EMPEROR_ARAGONESE_MONARCHY
+	}
+
+	ruler_female = {
+		1 = DUCHESS_ARAGONESE_MONARCHY
+		2 = QUEEN_ARAGONESE_MONARCHY
+		3 = EMPRESS_ARAGONESE_MONARCHY
+	}
+
+	consort_male = {
+		1 = PRINCE_CONSORT_ARAGONESE_MONARCHY
+		2 = PRINCE_CONSORT_ARAGONESE_MONARCHY
+		3 = PRINCE_CONSORT_ARAGONESE_MONARCHY
+	}
+
+	consort_female = {
+		1 = CONSORT_ARAGONESE_MONARCHY
+		2 = QUEEN_CONSORT_ARAGONESE_MONARCHY
+		3 = EMPRESS_CONSORT_ARAGONESE_MONARCHY
+	}
+
+	heir_male = {
+		1 = HEIR_ARAGONESE_MONARCHY
+		2 = HEIR_ARAGONESE_MONARCHY
+		3 = HEIR_ARAGONESE_MONARCHY
+	}
+
+	heir_female = {
+		1 = HEIR_fem_ARAGONESE_MONARCHY
+		2 = HEIR_fem_ARAGONESE_MONARCHY
+		3 = HEIR_fem_ARAGONESE_MONARCHY
+	}
+
+	trigger = {
+		government = monarchy
+		NOT = { has_reform = revolutionary_empire_reform }
+		primary_culture = aragonese	
+	}
+}
+
 
 #"Generic Spanish" monarchy names, includes Castellano, Asturllionés, Galician, and Asturianu
 rnfci_gen_spanish_monarchy = {
@@ -449,58 +751,9 @@ rnfci_gen_spanish_monarchy = {
 			primary_culture = asturian
 			primary_culture = galician
 		}
-		NOT = {
-			primary_culture = portugese	
-		}
 	}
 }
 
-#Alternate names for Duchy-rank Italian monarchies with less than 50 development - equates to "County".
-rnfci_generic_italian_monarchy_county = {
-
-	rank = {
-		1 = DUCHY_GEN_ITALIAN_SUBJECT
-		#2 = KINGDOM_GEN_ITALIAN
-		#3 = EMPIRE_GEN_ITALIAN
-	}
-
-	ruler_male = {
-		1 = DUKE_GEN_ITALIAN_SUBJECT
-		#2 = KING_GEN_ITALIAN
-		#3 = EMPEROR_GEN_ITALIAN
-	}
-
-	ruler_female = {
-		1 = DUCHESS_GEN_ITALIAN_SUBJECT
-		#2 = QUEEN_GEN_ITALIAN
-		#3 = EMPRESS_GEN_ITALIAN
-	}
-
-	trigger = {		
-		government = monarchy
-		NOT = { has_reform = revolutionary_empire_reform }
-		#is_subject = yes
-		NOT = {
-			government_rank = 2 #Since these government names are only for Duchy-rank nations, this is to prevent nations which would otherwise fulfill these triggers from having "nogovernmentname" as a name
-			total_development = 50
-			#The following tags were either historically duchies or were counties that became duchies by 1444
-			tag = URB
-			tag = MLO
-			tag = LUC
-			tag = MAN
-			tag = PAR
-			tag = TUS
-			tag = MSS
-		}
-		OR = {
-			culture_group = latin
-			culture_group = gallo_italic
-			primary_culture = sardinian
-			primary_culture = friulian_culture
-			primary_culture = ladin_culture
-		}
-	}
-}
 
 #Normal "Generic Italian" names
 rnfci_generic_italian_monarchy = {
