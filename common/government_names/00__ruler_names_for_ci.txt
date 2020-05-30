@@ -455,19 +455,25 @@ rnfci_gen_spanish_monarchy = {
 	}
 }
 
-#Alternate names for Italian monarchies with less than 50 development - equates to "County"
+#Alternate names for Duchy-rank Italian monarchies with less than 50 development - equates to "County".
 rnfci_generic_italian_monarchy_county = {
 
 	rank = {
 		1 = DUCHY_GEN_ITALIAN_SUBJECT
+		#2 = KINGDOM_GEN_ITALIAN
+		#3 = EMPIRE_GEN_ITALIAN
 	}
 
 	ruler_male = {
 		1 = DUKE_GEN_ITALIAN_SUBJECT
+		#2 = KING_GEN_ITALIAN
+		#3 = EMPEROR_GEN_ITALIAN
 	}
 
 	ruler_female = {
 		1 = DUCHESS_GEN_ITALIAN_SUBJECT
+		#2 = QUEEN_GEN_ITALIAN
+		#3 = EMPRESS_GEN_ITALIAN
 	}
 
 	trigger = {		
@@ -475,18 +481,30 @@ rnfci_generic_italian_monarchy_county = {
 		NOT = { has_reform = revolutionary_empire_reform }
 		#is_subject = yes
 		NOT = {
+			government_rank = 2 #Since these government names are only for Duchy-rank nations, this is to prevent nations which would otherwise fulfill these triggers from having "nogovernmentname" as a name
 			total_development = 50
+			#The following tags were either historically duchies or were counties that became duchies by 1444
+			tag = URB
+			tag = MLO
+			tag = LUC
+			tag = MAN
+			tag = PAR
+			tag = TUS
+			tag = MSS
 		}
 		OR = {
 			culture_group = latin
 			culture_group = gallo_italic
 			primary_culture = sardinian
+			primary_culture = friulian_culture
+			primary_culture = ladin_culture
 		}
 	}
 }
 
 #Normal "Generic Italian" names
 rnfci_generic_italian_monarchy = {
+
 	rank = {
 		1 = DUCHY_GEN_ITALIAN
 		2 = KINGDOM_GEN_ITALIAN
@@ -512,6 +530,8 @@ rnfci_generic_italian_monarchy = {
 			culture_group = latin
 			culture_group = gallo_italic
 			primary_culture = sardinian
+			primary_culture = friulian_culture
+			primary_culture = ladin_culture
 		}
 	}
 }
