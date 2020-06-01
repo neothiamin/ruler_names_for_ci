@@ -283,8 +283,6 @@ rnfci_flemish_monarchy = {
 	
 }
 
-
-
 #Special names for a Spain/Castile that owns any province in the Asturias area. Historically (and to this day) the heir-apparent is known as the "Prince/Princess of Asturias" in Spain.
 rnfci_spanish_monarchy_asturias = {
 
@@ -697,7 +695,6 @@ rnfci_aragonese_names = {
 	}
 }
 
-
 #"Generic Spanish" monarchy names, includes Castellano, Asturllionés, Galician, and Asturianu
 rnfci_gen_spanish_monarchy = {
 	rank = {
@@ -753,7 +750,6 @@ rnfci_gen_spanish_monarchy = {
 		}
 	}
 }
-
 
 #Normal "Generic Italian" names
 rnfci_generic_italian_monarchy = {
