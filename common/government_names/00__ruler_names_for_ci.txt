@@ -199,6 +199,7 @@ rnfci_occitan_monarchy = {
 	}
 
 	ruler_male = {
+		1 = DUC_OCCITAN
 		2 = KNG_OCCITAN
 		3 = EMPEROR_OCCITAN
 	}
