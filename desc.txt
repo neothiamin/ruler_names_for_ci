@@ -1,0 +1,27 @@
+[h1]Overview[/h1]
+
+This mod adds new government names - which includes government titles such as "Kingdom" or "Duchy", ruler titles like "King" or "Duke", heir names, and consort names - to many languages/cultures added or adjusted by Cultural Influence, an addon for Beyond Typus.
+
+[b]Names[/b]
+To see what names have been added, check the changelog or the Change Notes tab at the top of this page. However, some examples include:
+[list]
+[*]Names for Français language group monarchies, such as "Royaume", "Roi", and "Reine"
+[*]Names for Italian monarchies in both the Gallo-Italiche language group as well as Italo-Dalmate
+[*]Names for Spain, Castile, Aragon, and other Iberian monarchies (except Portugal, for now)
+[*]Names for duchy-rank Flanders or any duchy-rank monarchy with Nederfrankish, Nederlands, or Flemish as its primary language and with its capital in the Flanders area
+[/list]
+
+[b]Requirements[/b]
+[list]
+[*]Beyond Typus
+[*]Cultural Influence
+[/list]
+
+[b]Compatibility[/b]
+This mod should be compatible with [i]most[/i] mods, as the scope of it is very narrow.
+Note also that existing games might have some issues if you enable this mod. Nothing catastrophic, just some names might not update.
+
+[b]Bugs[/b]
+Please report any bugs you encounter to the Bug Reports discussion below.
+
+Enjoy!

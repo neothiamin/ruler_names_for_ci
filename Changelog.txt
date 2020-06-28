@@ -1,0 +1,19 @@
+v1:
+
++ Added names for:
+	- A Normaund Normandy that is the subject of a rank 2+ Français group nation
+	- Normaund monarchies in general
+	- Rank 1 Toulouse
+	- Independent Lengadocian, Gascon, Provençal, and Auvernhat language monarchies
+	- Flanders
+	- Nederfrankish/Flemish/Nederlands language rank 1 monarchies with their capital in the Flanders area
+	- Spain and Castile that own any province in the Asturias area
+	- Spain and Castile that do NOT own any province in the Asturias area - this differs from the above in heir names only
+	- Aragon if they own any province in either the Catalonia OR Valencia areas
+	- Rank 2 Italian monarchies in the HRE
+	- Rank 1 Italian monarchies with less than 50 development, with a few exceptions
+	- Generic French monarchies - these also apply to Lengadocian, Gascon, Provençal, or Auvernhat language tags that are subjects
+	- Generic Catalan monarchies
+	- Generic Navarro-Aragonés monarchies
+	- Generic "Spanish" monarchies - includes Castellano, Asturllionés, Galician, and Asturianu
+	- Generic Italian monarchies

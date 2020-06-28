@@ -251,15 +251,17 @@ rnfci_occitan_monarchy = {
 rnfci_flemish_monarchy = {
 	
 	rank = {
-        1 = DUCHY_FLEMISH_MONARCHY
-        
-    }
+        1 = DUCHY_FLEMISH_MONARCHY        
+	}
+	
     ruler_male = {
         1 = DUKE_FLEMISH_MONARCHY
-    }
+	}
+	
     ruler_female = {
         1 = DUCHESS_FLEMISH_MONARCHY 
-    }
+	}
+
 	
 	trigger = {
         government = monarchy
@@ -446,6 +448,39 @@ rnfci_castile_monarchy = {
 	}
 }
 
+#Names for HRE Italian Kingdoms. Historically the highest HRE Italian title was Prince/Princess, since they couldn't be Kings/Queens as they still fell under the jurisdiction of the HRE
+rnfci_italian_prince = {
+	
+	rank = {
+		2 = PRINCIPALITY_ITALIAN_HRE
+	}
+
+	ruler_male = {
+		2 = PRINCE_ITALIAN_HRE
+	}
+
+	ruler_female = {
+		2 = PRINCESS_ITALIAN_HRE
+	}
+
+	trigger = {
+		is_part_of_hre = yes
+		government_rank = 2
+		NOT = {
+			government_rank = 3
+		}
+		government = monarchy
+		NOT = { has_reform = revolutionary_empire_reform }
+		OR = {
+			culture_group = latin
+			culture_group = gallo_italic
+			primary_culture = sardinian
+			primary_culture = friulian_culture
+			primary_culture = ladin_culture
+		}
+	}
+}
+
 #Alternate names for Duchy-rank Italian monarchies with less than 50 development - equates to "County".
 rnfci_generic_italian_monarchy_county = {
 
@@ -483,39 +518,6 @@ rnfci_generic_italian_monarchy_county = {
 			tag = TUS
 			tag = MSS
 		}
-		OR = {
-			culture_group = latin
-			culture_group = gallo_italic
-			primary_culture = sardinian
-			primary_culture = friulian_culture
-			primary_culture = ladin_culture
-		}
-	}
-}
-
-#Names for HRE Italian Kingdoms. Historically the highest HRE Italian title was Prince/Princess, since they couldn't be Kings/Queens as they still fell under the jurisdiction of the HRE
-rnfci_italian_prince = {
-	
-	rank = {
-		2 = PRINCIPALITY_ITALIAN_HRE
-	}
-
-	ruler_male = {
-		2 = PRINCE_ITALIAN_HRE
-	}
-
-	ruler_female = {
-		2 = PRINCESS_ITALIAN_HRE
-	}
-
-	trigger = {
-		is_part_of_hre = yes
-		government_rank = 2
-		NOT = {
-			government_rank = 3
-		}
-		government = monarchy
-		NOT = { has_reform = revolutionary_empire_reform }
 		OR = {
 			culture_group = latin
 			culture_group = gallo_italic
