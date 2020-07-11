@@ -18,7 +18,7 @@ template_names_monarchy = {
 		3 = EMPRESS
 	}
 
-	consort_male  = {
+	consort_male = {
 		1 = PRINCE_CONSORT
 		2 = PRINCE_CONSORT
 		3 = PRINCE_CONSORT
@@ -751,6 +751,34 @@ rnfci_gen_spanish_monarchy = {
 			primary_culture = asturian
 			primary_culture = galician
 		}
+	}
+}
+
+#More specific, Piedmontese names
+rnfci_piedmontese_monarchy = {
+
+	rank = {
+		1 = DUCHY_GEN_ITALIAN #Could not find Piedmontese name
+		2 = KINGDOM_PIEDMONTESE
+		3 = EMPIRE_PIEDMONTESE
+	}
+
+	ruler_male = {
+		1 = DUKE_GEN_ITALIAN #Could not find Piedmontese name
+		2 = KING_PIEDMONTESE
+		3 = EMPEROR_PIEDMONTESE
+	}
+
+	ruler_female = {
+		1 = DUCHESS_GEN_ITALIAN #Could not find Piedmontese name
+		2 = QUEEN_GEN_ITALIAN #Could not find Piedmontese name
+		3 = EMPRESS_GEN_ITALIAN #Could not find Piedmontese name
+	}
+
+	trigger = {		
+		government = monarchy
+		NOT = { has_reform = revolutionary_empire_reform }
+		culture = piedmontese
 	}
 }
 
