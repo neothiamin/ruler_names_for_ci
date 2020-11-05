@@ -49,6 +49,53 @@ template_names_monarchy = {
 	}
 }
 
+fixed_turkish_monarchy = {
+	rank = {
+		1 = BEYLIK
+		2 = SULTANATE
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = BEY
+		2 = SULTAN
+		3 = PADISHAH
+	}
+
+	ruler_female = {
+		1 = HATUN
+		2 = SULTAN_fem
+		3 = PADISHAH
+	}
+	
+	heir_male = {
+		1 = VALI_AHAD
+		2 = VALI_AHAD
+		3 = VALI_AHAD
+	}
+	heir_female = {
+		1 = VALI_AHAD
+		2 = VALI_AHAD
+		3 = VALI_AHAD
+	}
+	
+	consort_male = {
+		1 = BEY
+		2 = SULTAN
+		3 = PADISHAH
+	}
+	consort_female = {
+		1 = HATUN
+		2 = HASEKI_SULTAN
+		3 = HASEKI_SULTAN
+	}
+
+	trigger = {
+		has_reform = ottoman_government
+		tag = TUR
+	}
+}
+
 #Names for a nation that is 1) Normaund 2) Normandy 3) a subject of a rank-2+ French language group nation.
 rnfci_normand_monarchy_subject = {
 	
@@ -291,7 +338,7 @@ rnfci_spanish_monarchy_asturias = {
 
 	rank = {
 		1 = DUCHY_GEN_SPANISH_MONARCHY
-		2 = KINGDOM_GEN_SPANISH_MONARCHY
+		2 = KINGDOM_CASTILE_MONARCHY
 		3 = EMPIRE_GEN_SPANISH_MONARCHY
 	}
 
@@ -406,44 +453,58 @@ rnfci_crown_of_aragon = {
 		}
 	}
 }
-#UNUSED
+#Crown of Castile
 rnfci_castile_monarchy = {
-
 	rank = {
-		1 = DUCHY_CASTILE_MONARCHY
+		1 = DUCHY_GEN_SPANISH_MONARCHY
 		2 = KINGDOM_CASTILE_MONARCHY
-		3 = EMPIRE_CASTILE_MONARCHY
+		3 = EMPIRE_GEN_SPANISH_MONARCHY
+	}
+
+	ruler_male = {
+		1 = DUKE_GEN_SPANISH_MONARCHY
+		2 = KING_GEN_SPANISH_MONARCHY
+		3 = EMPEROR_GEN_SPANISH_MONARCHY
 	}
 
 	ruler_female = {
-		1 = DUCHESS_CASTILE_MONARCHY
-		2 = QUEEN_CASTILE_MONARCHY
-		3 = EMPRESS_CASTILE_MONARCHY
-	}
-	ruler_male = {
-		1 = DUKE_CASTILE_MONARCHY
-		2 = KING_CASTILE_MONARCHY
-		3 = EMPEROR_CASTILE_MONARCHY
+		1 = DUCHESS_GEN_SPANISH_MONARCHY
+		2 = QUEEN_GEN_SPANISH_MONARCHY
+		3 = EMPRESS_GEN_SPANISH_MONARCHY
 	}
 
 	heir_male = {
-		1 = HEIR_M_CASTILE_MONARCHY
-		2 = HEIR_M_CASTILE_MONARCHY
-		3 = HEIR_M_CASTILE_MONARCHY
+		1 = HEIR_M_GEN_SPANISH_MONARCHY
+		2 = HEIR_M_GEN_SPANISH_MONARCHY
+		3 = HEIR_M_GEN_SPANISH_MONARCHY
 	}
 
 	heir_female = {
-		1 = HEIR_F_CASTILE_MONARCHY
-		2 = HEIR_F_CASTILE_MONARCHY
-		3 = HEIR_F_CASTILE_MONARCHY		
+		1 = HEIR_F_GEN_SPANISH_MONARCHY
+		2 = HEIR_F_GEN_SPANISH_MONARCHY
+		3 = HEIR_F_GEN_SPANISH_MONARCHY		
 	}
+
+	consort_male = {
+		1 = DUKE_CONSORT_GEN_SPANISH_MONARCHY
+		2 = KING_CONSORT_GEN_SPANISH_MONARCHY
+		3 = EMPEROR_CONSORT_GEN_SPANISH_MONARCHY
+	}
+
+	consort_female = {
+		1 = DUCHESS_CONSORT_GEN_SPANISH_MONARCHY
+		2 = QUEEN_CONSORT_GEN_SPANISH_MONARCHY
+		3 = EMPRESS_CONSORT_GEN_SPANISH_MONARCHY
+	}
+
 	trigger = {		
-		always = no
 		government = monarchy
 		NOT = { has_reform = revolutionary_empire_reform }
 		OR = {
-			tag = CAS
 			primary_culture = castillian
+			primary_culture = leonese
+			primary_culture = asturian
+			primary_culture = galician
 		}
 	}
 }

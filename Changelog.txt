@@ -3,6 +3,9 @@ v1.1:
 + Added names for
 	- Piedmontese: King/Kingdom + Emperor/Empire
 
++ Added fixed Turkish names
++ Reworked Castilian names
+
 v1:
 
 + Added names for:
