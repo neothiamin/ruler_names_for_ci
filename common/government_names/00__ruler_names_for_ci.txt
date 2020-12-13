@@ -42,7 +42,7 @@ template_names_monarchy = {
 		3 = HEIR_fem
 	}
 
-	government_reform = monarchy_mechanic
+	#government_reform = monarchy_mechanic
 
 	trigger = {
 		always = no
@@ -321,7 +321,7 @@ rnfci_flemish_monarchy = {
             AND = {
                 OR = {
                     primary_culture = dutch
-                    primary_culture = low_franconian
+                    primary_culture = dutch_modern
                     primary_culture = flemish
                 }                
                 capital_scope = {
@@ -874,5 +874,57 @@ rnfci_generic_italian_monarchy = {
 			primary_culture = friulian_culture
 			primary_culture = ladin_culture
 		}
+	}
+}
+
+rnfci_norwegian_monarchy = {
+
+	rank = {
+		1 = DUCHY_NORWEGIAN_MONARCHY
+		2 = KINGDOM_NORWEGIAN_MONARCHY
+		3 = EMPIRE_NORWEGIAN_MONARCHY
+	}
+
+	ruler_male = {
+		1 = DUKE_NORWEGIAN_MONARCHY
+		2 = KING_NORWEGIAN_MONARCHY
+		3 = EMPEROR_NORWEGIAN_MONARCHY
+	}
+
+	ruler_female = {
+		1 = DUCHESS_NORWEGIAN_MONARCHY
+		2 = QUEEN_NORWEGIAN_MONARCHY
+		3 = EMPRESS_NORWEGIAN_MONARCHY
+	}
+
+	consort_male = {
+		1 = PRINCE_CONSORT_NORWEGIAN_MONARCHY
+		2 = PRINCE_CONSORT_NORWEGIAN_MONARCHY
+		3 = PRINCE_CONSORT_NORWEGIAN_MONARCHY
+	}
+
+	consort_female = {
+		1 = CONSORT_NORWEGIAN_MONARCHY
+		2 = CONSORT_NORWEGIAN_MONARCHY
+		3 = CONSORT_NORWEGIAN_MONARCHY
+	}
+
+	heir_male = {
+		1 = HEIR_NORWEGIAN_MONARCHY
+		2 = HEIR_NORWEGIAN_MONARCHY
+		3 = HEIR_NORWEGIAN_MONARCHY
+	}
+
+	heir_female = {
+		1 = HEIR_fem_NORWEGIAN_MONARCHY
+		2 = HEIR_fem_NORWEGIAN_MONARCHY
+		3 = HEIR_fem_NORWEGIAN_MONARCHY
+	}
+
+	government_reform = monarchy_mechanic
+
+	trigger = {
+		primary_culture = norwegian
+		NOT = { has_reform = revolutionary_empire_reform }
 	}
 }
