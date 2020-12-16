@@ -2,9 +2,12 @@ v1.1:
 
 + Added names for
 	- Piedmontese: King/Kingdom + Emperor/Empire
+	- Norwegian Monarchy: all
 
 + Added fixed Turkish names
 + Reworked Castilian names
+
+* Corrected an incorrect reference to a culture in the Flemish names set
 
 v1:
 

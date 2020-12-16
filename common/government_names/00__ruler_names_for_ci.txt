@@ -921,10 +921,11 @@ rnfci_norwegian_monarchy = {
 		3 = HEIR_fem_NORWEGIAN_MONARCHY
 	}
 
-	government_reform = monarchy_mechanic
+	#government_reform = monarchy_mechanic
 
 	trigger = {
 		primary_culture = norwegian
 		NOT = { has_reform = revolutionary_empire_reform }
+		government = monarchy
 	}
 }
