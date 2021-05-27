@@ -333,6 +333,110 @@ rnfci_flemish_monarchy = {
 	
 }
 
+rnfci_portuguese_monarchy_braganza = {
+	rank = {
+		1 = DUCHY_PORTUGAL
+		2 = KINGDOM_PORTUGAL
+		3 = EMPIRE_PORTUGAL
+	}
+
+	ruler_male = {
+		1 = DUKE_PORTUGAL
+		2 = KING_PORTUGAL
+		3 = EMPEROR_PORTUGAL
+	}
+
+	ruler_female = {
+		1 = DUCHESS_PORTUGAL
+		2 = QUEEN_PORTUGAL
+		3 = EMPRESS_PORTUGAL
+	}
+
+	consort_male = {
+		1 = PRINCE_CONSORT_PORTUGAL
+		2 = KING_CONSORT_PORTUGAL
+		3 = KING_CONSORT_PORTUGAL
+	}
+
+	consort_female = {
+		1 = CONSORT_PORTUGAL
+		2 = QUEEN_CONSORT_PORTUGAL
+		3 = EMPRESS_CONSORT_PORTUGAL
+	}
+
+	heir_male = {
+		1 = DUCHY_HEIR_PORTUGAL
+		2 = HEIR_PORTUGAL_BRAGANZA
+		3 = HEIR_PORTUGAL_BRAGANZA
+	}
+
+	heir_female = {
+		1 = DUCHY_HEIR_fem_PORTUGAL
+		2 = HEIR_fem_PORTUGAL_BRAGANZA
+		3 = HEIR_fem_PORTUGAL_BRAGANZA
+	}
+
+	#government_reform = monarchy_mechanic
+
+	trigger = {
+		government = monarchy
+		primary_culture = portugese
+		owns = 232
+	}
+}
+
+#Portuguese Names
+rnfci_portuguese_monarchy = {
+	rank = {
+		1 = DUCHY_PORTUGAL
+		2 = KINGDOM_PORTUGAL
+		3 = EMPIRE_PORTUGAL
+	}
+
+	ruler_male = {
+		1 = DUKE_PORTUGAL
+		2 = KING_PORTUGAL
+		3 = EMPEROR_PORTUGAL
+	}
+
+	ruler_female = {
+		1 = DUCHESS_PORTUGAL
+		2 = QUEEN_PORTUGAL
+		3 = EMPRESS_PORTUGAL
+	}
+
+	consort_male = {
+		1 = PRINCE_CONSORT_PORTUGAL
+		2 = KING_CONSORT_PORTUGAL
+		3 = KING_CONSORT_PORTUGAL
+	}
+
+	consort_female = {
+		1 = CONSORT_PORTUGAL
+		2 = QUEEN_CONSORT_PORTUGAL
+		3 = EMPRESS_CONSORT_PORTUGAL
+	}
+
+	heir_male = {
+		1 = DUCHY_HEIR_PORTUGAL
+		2 = HEIR_PORTUGAL
+		3 = HEIR_PORTUGAL
+	}
+
+	heir_female = {
+		1 = DUCHY_HEIR_fem_PORTUGAL
+		2 = HEIR_fem_PORTUGAL
+		3 = HEIR_fem_PORTUGAL
+	}
+
+	#government_reform = monarchy_mechanic
+
+	trigger = {
+		government = monarchy
+		primary_culture = portugese
+	}
+}
+
 #Special names for a Spain/Castile that owns any province in the Asturias area. Historically (and to this day) the heir-apparent is known as the "Prince/Princess of Asturias" in Spain.
 rnfci_spanish_monarchy_asturias = {
 
@@ -499,13 +603,11 @@ rnfci_castile_monarchy = {
 
 	trigger = {		
 		government = monarchy
-		NOT = { has_reform = revolutionary_empire_reform }
 		OR = {
-			primary_culture = castillian
-			primary_culture = leonese
-			primary_culture = asturian
-			primary_culture = galician
+			tag = SPA
+			tag = CAS
 		}
+		NOT = { has_reform = revolutionary_empire_reform }
 	}
 }
 
@@ -927,5 +1029,92 @@ rnfci_norwegian_monarchy = {
 		primary_culture = norwegian
 		NOT = { has_reform = revolutionary_empire_reform }
 		government = monarchy
+	}
+}
+
+rnfci_piedmontese_venetian_republic = {
+
+	rank = {
+		1 = REPUBLICA_GALLO-ITALIC_VENETIAN
+		2 = REPUBLICA_GALLO-ITALIC_VENETIAN
+		3 = REPUBLICA_GALLO-ITALIC_VENETIAN
+	}
+
+	ruler_male = {
+		1 = DOGE
+		2 = DOGE
+		3 = DOGE
+	}
+
+	ruler_female = {
+		1 = DOGE
+		2 = DOGE
+		3 = DOGE
+	}
+
+	trigger = {
+		government = republic
+		OR = {
+			culture_group = gallo_italic
+			primary_culture = venetian
+		}
+	}
+}
+
+rnfci_neapolitan_republic = {
+
+	rank = {
+		1 = REPUBBRECA
+		2 = REPUBBRECA
+		3 = REPUBBRECA
+	}
+
+	ruler_male = {
+		1 = DOGE
+		2 = DOGE
+		3 = DOGE
+	}
+
+	ruler_female = {
+		1 = DOGE
+		2 = DOGE
+		3 = DOGE
+	}
+
+	trigger = {
+		government = republic
+		primary_culture = neapolitan
+	}
+}
+
+rnfci_other_italian_republic = {
+
+	rank = {
+		1 = REPUBBLICA
+		2 = REPUBBLICA
+		3 = REPUBBLICA
+	}
+
+	ruler_male = {
+		1 = DOGE
+		2 = DOGE
+		3 = DOGE
+	}
+
+	ruler_female = {
+		1 = DOGE
+		2 = DOGE
+		3 = DOGE
+	}
+
+	trigger = {
+		government = republic
+		OR = {
+			culture_group = latin
+			culture_group = gallo_italic
+			primary_culture = sardinian
+			primary_culture = friulian_culture
+			primary_culture = ladin_culture
+		}
 	}
 }
