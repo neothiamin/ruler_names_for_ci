@@ -1,13 +1,27 @@
 Ruler Titles:
 -----------------
 Occitan cultures - DONE, I THINK
-Portuguese
+Portuguese - DONE
 Catalan - DONE, I THINK
 Northern Italian - DONE, COVERED BY GENERIC ITALIAN
+High German Monarchies
+Low German Monarchies
+Polish Monarchies
+Germanic Theocracies (Unique for Teutonic Order and Livonian Order?)
+Germanic Republics
 
 Government Names:
 -----------------
 Occitan cultures - DONE, I THINK
-Portuguese
+Portuguese - DONE
 Catalan - DONE, I THINK
 Northern Italian - DONE, COVERED BY GENERIC ITALIAN
+High German Monarchies
+Low German Monarchies
+Polish Monarchies
+Germanic Theocracies (Unique for Teutonic Order and Livonian Order?)
+Germanic Republics
+
+Decisions:
+-----------------
+"Adopt XXX Style" - changes certain culture/government combos' government names to another set (i.e. small Italian monarchies can use republican names)

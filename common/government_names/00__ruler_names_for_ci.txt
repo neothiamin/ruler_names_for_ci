@@ -49,52 +49,53 @@ template_names_monarchy = {
 	}
 }
 
-fixed_turkish_monarchy = {
-	rank = {
-		1 = BEYLIK
-		2 = SULTANATE
-		3 = EMPIRE
-	}
-
-	ruler_male = {
-		1 = BEY
-		2 = SULTAN
-		3 = PADISHAH
-	}
-
-	ruler_female = {
-		1 = HATUN
-		2 = SULTAN_fem
-		3 = PADISHAH
-	}
-	
-	heir_male = {
-		1 = VALI_AHAD
-		2 = VALI_AHAD
-		3 = VALI_AHAD
-	}
-	heir_female = {
-		1 = VALI_AHAD
-		2 = VALI_AHAD
-		3 = VALI_AHAD
-	}
-	
-	consort_male = {
-		1 = BEY
-		2 = SULTAN
-		3 = PADISHAH
-	}
-	consort_female = {
-		1 = HATUN
-		2 = HASEKI_SULTAN
-		3 = HASEKI_SULTAN
-	}
-
-	trigger = {
-		has_reform = ottoman_government
-		tag = TUR
-	}
-}
+#Not needed, Paradox fixed this set
+#fixed_turkish_monarchy = {
+#	rank = {
+#		1 = BEYLIK
+#		2 = SULTANATE
+#		3 = EMPIRE
+#	}
+#
+#	ruler_male = {
+#		1 = BEY
+#		2 = SULTAN
+#		3 = PADISHAH
+#	}
+#
+#	ruler_female = {
+#		1 = HATUN
+#		2 = SULTAN_fem
+#		3 = PADISHAH
+#	}
+#	
+#	heir_male = {
+#		1 = VALI_AHAD
+#		2 = VALI_AHAD
+#		3 = VALI_AHAD
+#	}
+#	heir_female = {
+#		1 = VALI_AHAD
+#		2 = VALI_AHAD
+#		3 = VALI_AHAD
+#	}
+#	
+#	consort_male = {
+#		1 = BEY
+#		2 = SULTAN
+#		3 = PADISHAH
+#	}
+#	consort_female = {
+#		1 = HATUN
+#		2 = HASEKI_SULTAN
+#		3 = HASEKI_SULTAN
+#	}
+#
+#	trigger = {
+#		has_reform = ottoman_government
+#		tag = TUR
+#	}
+#}
 
 #Names for a nation that is 1) Normaund 2) Normandy 3) a subject of a rank-2+ French language group nation.
 rnfci_normand_monarchy_subject = {
@@ -321,7 +322,7 @@ rnfci_flemish_monarchy = {
             AND = {
                 OR = {
                     primary_culture = dutch
-                    primary_culture = dutch_modern
+                    #primary_culture = dutch_modern
                     primary_culture = flemish
                 }                
                 capital_scope = {
@@ -636,7 +637,7 @@ rnfci_italian_prince = {
 		NOT = { has_reform = revolutionary_empire_reform }
 		OR = {
 			culture_group = latin
-			culture_group = gallo_italic
+			#culture_group = gallo_italic
 			primary_culture = sardinian
 			primary_culture = friulian_culture
 			primary_culture = ladin_culture
@@ -683,7 +684,7 @@ rnfci_generic_italian_monarchy_county = {
 		}
 		OR = {
 			culture_group = latin
-			culture_group = gallo_italic
+			#culture_group = gallo_italic
 			primary_culture = sardinian
 			primary_culture = friulian_culture
 			primary_culture = ladin_culture
@@ -743,10 +744,10 @@ rnfci_generic_french_monarchy = {
 		#	tag = BUR
 		#}
 		OR = {
-			primary_culture = occitain
-			primary_culture = aquitaine
-			primary_culture = gascon
-			primary_culture = auvergnat_culture
+			#primary_culture = occitain
+			#primary_culture = aquitaine
+			#primary_culture = gascon
+			#primary_culture = auvergnat_culture
 			culture_group = french
 		}
 		capital_scope = {
@@ -971,7 +972,7 @@ rnfci_generic_italian_monarchy = {
 		NOT = { has_reform = revolutionary_empire_reform }
 		OR = {
 			culture_group = latin
-			culture_group = gallo_italic
+			#culture_group = gallo_italic
 			primary_culture = sardinian
 			primary_culture = friulian_culture
 			primary_culture = ladin_culture
@@ -1055,7 +1056,7 @@ rnfci_piedmontese_venetian_republic = {
 	trigger = {
 		government = republic
 		OR = {
-			culture_group = gallo_italic
+			#culture_group = gallo_italic
 			primary_culture = venetian
 		}
 	}
@@ -1111,7 +1112,7 @@ rnfci_other_italian_republic = {
 		government = republic
 		OR = {
 			culture_group = latin
-			culture_group = gallo_italic
+			#culture_group = gallo_italic
 			primary_culture = sardinian
 			primary_culture = friulian_culture
 			primary_culture = ladin_culture

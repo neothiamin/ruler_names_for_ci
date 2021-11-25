@@ -1,12 +1,11 @@
-version="1"
+version="1.1"
 tags={
 	"Historical"
 }
 dependencies={
-	"[BETA] Beyond Typus Addon : Cultural Influence | Version 0.6.1.2 Overhaul"
-	"Beyond Typus"
-	"Culturally Forked"
+	"Beyond Typus"	
+	"BT github"
 }
-name="BT Addon: Ruler Names for CI"
-supported_version="1.30.*"
+name="Ruler Names for Beyond Typus"
+supported_version="1.32.*"
 remote_file_id="2145651605"

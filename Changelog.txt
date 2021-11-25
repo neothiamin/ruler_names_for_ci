@@ -8,6 +8,7 @@ v1.1:
 + Reworked Castilian names
 
 * Corrected an incorrect reference to a culture in the Flemish names set
+* Changed the name of the mod, lol
 
 v1:
 
