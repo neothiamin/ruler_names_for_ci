@@ -3,7 +3,7 @@ tags={
 	"Historical"
 }
 dependencies={
-	"Beyond Typus"	
+	"Beyond Typus"
 	"BT github"
 }
 name="Ruler Names for Beyond Typus"
