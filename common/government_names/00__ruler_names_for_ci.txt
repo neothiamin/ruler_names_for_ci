@@ -543,10 +543,7 @@ rnfci_crown_of_aragon = {
 
 	trigger = {
 		tag = ARA
-		OR = {
-			government = monarchy
-			has_reform = crown_of_aragon
-		}
+		government = monarchy
 		any_owned_province = {
 			OR = {
 				area = catalonia_area

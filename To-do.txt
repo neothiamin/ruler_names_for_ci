@@ -7,7 +7,7 @@ Northern Italian - DONE, COVERED BY GENERIC ITALIAN
 High German Monarchies
 Low German Monarchies
 Polish Monarchies
-Germanic Theocracies (Unique for Teutonic Order and Livonian Order?)
+Germanic Theocracies  - Unique for Teutonic Order and Livonian Order?
 Germanic Republics
 
 Government Names:
@@ -19,9 +19,9 @@ Northern Italian - DONE, COVERED BY GENERIC ITALIAN
 High German Monarchies
 Low German Monarchies
 Polish Monarchies
-Germanic Theocracies (Unique for Teutonic Order and Livonian Order?)
+Germanic Theocracies  - Unique for Teutonic Order and Livonian Order?
 Germanic Republics
 
 Decisions:
 -----------------
-"Adopt XXX Style" - changes certain culture/government combos' government names to another set (i.e. small Italian monarchies can use republican names)
+"Adopt XXX Style" - changes certain culture/government combos' government names to another set -- i.e. small Italian monarchies can use republican names
